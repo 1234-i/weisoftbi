@@ -203,7 +203,7 @@ if (uid.value === '1') {
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    background-color: #1e2738;
+    background-color: #6366F11A;
   }
   .main-color {
     background: var(--ed-color-primary);

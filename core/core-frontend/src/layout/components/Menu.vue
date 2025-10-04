@@ -60,7 +60,7 @@ const menuSelect = (index: string, indexPath: string[]) => {
   border: none;
   .ed-menu-item:not(.is-active) {
     &:hover {
-      background-color: #1f23291a !important;
+      background-color: #6366F11A !important;
     }
   }
   .is-active:not(.ed-sub-menu) {
@@ -70,12 +70,12 @@ const menuSelect = (index: string, indexPath: string[]) => {
     margin: 0;
     .ed-sub-menu__title {
       &:hover {
-        background-color: #1f23291a;
+        background-color: #6366F11A;
       }
     }
     .ed-menu-item:not(.is-active) {
       &:hover {
-        background-color: #1f23291a !important;
+        background-color: #6366F11A !important;
       }
     }
     ul.ed-menu {
