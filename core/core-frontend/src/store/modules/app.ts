@@ -20,7 +20,7 @@ export const useAppStore = defineStore('app', {
       size: true, // 尺寸图标
       pageLoading: false, // 路由跳转loading
       title: '',
-      dekey: 'DataEaseKey',
+      dekey: 'weisoftKey',
       isDataEaseBi: false,
       isIframe: false,
       desktop: false,

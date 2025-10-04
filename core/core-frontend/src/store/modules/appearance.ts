@@ -252,7 +252,7 @@ export const useAppearanceStore = defineStore('appearanceStore', {
       const resData = res.data
       if (!resData?.length) {
         if (!isDataEaseBi) {
-          document.title = 'DataEase'
+          document.title = 'weisoft BI'
           setLinkIcon()
         }
         return
@@ -310,7 +310,7 @@ export const useAppearanceStore = defineStore('appearanceStore', {
             .toRGB()
         )
       } else if (document.documentElement.style.getPropertyValue('--ed-color-primary')) {
-        document.documentElement.style.setProperty('--ed-color-primary', '#3370FF')
+        document.documentElement.style.setProperty('--ed-color-primary', '#6366f1')
         document.documentElement.style.removeProperty('--ed-color-primary-light-3')
         document.documentElement.style.removeProperty('--ed-color-primary-light-5')
         document.documentElement.style.removeProperty('--ed-color-primary-1a')
@@ -331,8 +331,8 @@ export const useAppearanceStore = defineStore('appearanceStore', {
         document.title = this.name
         setTitle(this.name)
       } else {
-        document.title = 'DataEase'
-        setTitle('DataEase')
+        document.title = 'weisoft BI'
+        setTitle('weisoft BI')
       }
       setLinkIcon(this.web)
     }
@@ -345,7 +345,7 @@ const setLinkIcon = (linkWeb?: string) => {
     if (linkWeb) {
       link['href'] = baseUrl + linkWeb
     } else {
-      link['href'] = '/dataease.svg'
+      link['href'] = '/weisoft.svg'
     }
   }
 }

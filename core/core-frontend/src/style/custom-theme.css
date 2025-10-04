@@ -88,7 +88,7 @@
 }
 
 .vjs-custom-skin > .video-js .vjs-loading-spinner {
-  border-color: rgba(36, 131, 213, 0.8);
+  border-color: rgba(99, 102, 241, 0.8);
 }
 
 .vjs-custom-skin > .video-js .vjs-control-bar2 {
@@ -103,7 +103,7 @@
 
 .vjs-custom-skin > .video-js .vjs-play-progress,
 .vjs-custom-skin > .video-js .vjs-volume-level {
-  background-color: #2483d5;
+  background-color: #6366F1;
 }
 
 .vjs-custom-skin > .video-js .vjs-play-progress:before {
