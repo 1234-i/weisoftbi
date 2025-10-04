@@ -52,3 +52,31 @@ core/core-frontend/src/assets/fsSvg.html
 .vite/
 /core/backend/
 /classpath:substitule.json
+
+# Docker data volumes
+/data/
+
+# Project documentation and temporary files
+LOGO_REPLACEMENT_PLAN.md
+LOGO_REPLACEMENT_SUMMARY.md
+今日工作总结.md
+字符编码问题修复说明.md
+数据集创建总结与思路.md
+金融数据大屏数据集创建指南.md
+SQLBot部署和集成指南.md
+
+# SQL scripts and database files
+cleanup_and_recreate_tables.sql
+financial_dashboard_dataset.sql
+init.sql
+
+# Logo and image files
+logo-weisoft.svg
+weisoft.svg
+purple-robot-icon.svg
+
+# Docker compose files
+docker-compose-dev.yml
+
+# Maven POM files
+dataease-license-sdk-*.pom
