@@ -16,7 +16,7 @@ import { msgCountApi } from '@/api/msg'
 import { computed, ref, onMounted } from 'vue'
 import { useEmitt } from '@/hooks/web/useEmitt'
 
-const aiBaseUrl = ref('https://maxkb.fit2cloud.com/ui/chat/2ddd8b594ce09dbb?mode=embed')
+const aiBaseUrl = ref(null) // 禁用 AI 助手
 const showToolbox = ref(false)
 
 const badgeCount = ref('0')
@@ -95,16 +95,7 @@ onMounted(() => {
   >
     <template #default>
       <div>
-        <div class="card-content_desk">
-          <TopDesktopCard
-            v-if="aiBaseUrl && appearanceStore.getShowAi"
-            @openBlank="handleAiClick"
-            :cardInfo="{
-              icon: dvAi,
-              name: $t('commons.assistant')
-            }"
-          ></TopDesktopCard>
-        </div>
+        <div class="card-content_desk"></div>
         <div class="border-top">
           <el-popover
             :teleported="false"

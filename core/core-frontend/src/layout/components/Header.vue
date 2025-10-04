@@ -14,7 +14,7 @@ import { Icon } from '@/components/icon-custom'
 import SystemCfg from './SystemCfg.vue'
 import ToolboxCfg from './ToolboxCfg.vue'
 import { useRouter, useRoute } from 'vue-router_2'
-import TopDoc from '@/layout/components/TopDoc.vue'
+// import TopDoc from '@/layout/components/TopDoc.vue' // 已禁用 - weisoft BI 定制
 import AccountOperator from '@/layout/components/AccountOperator.vue'
 import { isDesktop } from '@/utils/ModelUtil'
 import { XpackComponent } from '@/components/plugin'
@@ -32,7 +32,7 @@ import { useCache } from '@/hooks/web/useCache'
 import { useI18n } from '@/hooks/web/useI18n'
 import { msgCountApi } from '@/api/msg'
 const { wsCache } = useCache('localStorage')
-const aiBaseUrl = ref('https://maxkb.fit2cloud.com/ui/chat/2ddd8b594ce09dbb?mode=embed')
+const aiBaseUrl = ref(null) // 禁用 AI 助手
 const handleIconClick = () => {
   if (route.path === '/workbranch/index') return
   push('/workbranch/index')
@@ -156,15 +156,6 @@ onMounted(() => {
           <Icon name="copilot"><logo_sqlbot @click="handleSQLBotClick" class="svg-icon" /></Icon>
         </el-icon>
       </el-tooltip>
-      <el-tooltip effect="dark" :content="t('commons.assistant')" placement="bottom">
-        <el-icon
-          style="margin: 0 10px"
-          class="ai-icon"
-          v-if="aiBaseUrl && !showOverlay && appearanceStore.getShowAi"
-        >
-          <Icon name="dv-ai"><dvAi @click="handleAiClick" class="svg-icon" /></Icon>
-        </el-icon>
-      </el-tooltip>
       <el-tooltip effect="dark" :content="t('data_export.export_center')" placement="bottom">
         <el-icon
           class="preview-download_icon"
@@ -182,7 +173,7 @@ onMounted(() => {
         class="ai-icon-tips"
       />
       <ToolboxCfg v-if="showToolbox" />
-      <TopDoc v-if="appearanceStore.getShowDoc" />
+      <!-- <TopDoc v-if="appearanceStore.getShowDoc" /> 已禁用 - weisoft BI 定制 -->
       <el-tooltip
         v-if="showMsg"
         effect="dark"
