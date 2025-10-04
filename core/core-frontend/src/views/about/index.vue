@@ -225,7 +225,6 @@ const update = (licKey: string) => {
         >
           <el-button plain> {{ $t('about.update_license') }} </el-button>
         </el-upload>
-        <el-button plain @click="support"> {{ $t('about.support') }} </el-button>
         <el-button v-if="license.status === 'expired'" plain @click="back2Community">
           {{ $t('about.back_community') }}
         </el-button>

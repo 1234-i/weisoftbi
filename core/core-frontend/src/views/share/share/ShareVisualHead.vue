@@ -823,9 +823,9 @@ defineExpose({
     margin-right: 4px;
   }
   .done-finish {
-    color: #3370ff;
+    color: #6366f1;
     &:hover {
-      background-color: #3370ff1a !important;
+      background-color: #6366f11a !important;
     }
   }
   .input-suffix-btn {

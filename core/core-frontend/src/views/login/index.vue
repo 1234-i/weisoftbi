@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import DataEase from '@/assets/svg/DataEase.svg'
+import WeisoftLogo from '@/assets/svg/logo.svg'
 import { ref, reactive, onMounted, computed, nextTick } from 'vue'
 import { useI18n } from '@/hooks/web/useI18n'
 import { FormRules, FormInstance } from 'element-plus-secondary'
@@ -15,7 +15,7 @@ import router from '@/router'
 import { ElMessage } from 'element-plus-secondary'
 import { XpackComponent } from '@/components/plugin'
 import { logoutHandler } from '@/utils/logout'
-import DeImage from '@/assets/login-desc-de.png'
+import WeisoftBgImage from '@/assets/login-bg-weisoft.svg?url'
 import elementResizeDetectorMaker from 'element-resize-detector'
 import { cleanPlatformFlag } from '@/utils/utils'
 import xss from 'xss'
@@ -269,7 +269,7 @@ onMounted(async () => {
           v-if="axiosFinished"
           class="login-image"
           fit="cover"
-          :src="loginImageUrl || DeImage"
+          :src="loginImageUrl || WeisoftBgImage"
         />
       </div>
       <div class="login-form-content" v-loading="loading">
@@ -285,9 +285,9 @@ onMounted(async () => {
               <Icon
                 v-if="!loginLogoUrl && axiosFinished"
                 className="login-logo-icon"
-                name="DataEase"
+                name="WeisoftLogo"
               >
-                <DataEase class="login-logo-icon" />
+                <WeisoftLogo class="login-logo-icon" />
               </Icon>
               <img v-if="loginLogoUrl && axiosFinished" :src="loginLogoUrl" alt="" />
             </div>
